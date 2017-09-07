@@ -28,5 +28,5 @@ nameAutorModulo('chance',(error,autorModulo)=>{
         console.log('Error ',error);
         return;
     }
-    console.log('El email del autor del módulo es',autorModulo);
+    console.log(`El email del autor del módulo 'chance' es ${autorModulo}`);
 })
