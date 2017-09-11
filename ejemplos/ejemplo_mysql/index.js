@@ -27,6 +27,7 @@ connection.query('SELECT * FROM agentes',(err, rows, fields)=>{
         process.exit(1);
         return;
     }
+    //pintar los resultados
     for (let i= 0; i < rows.length; i++){
         const agente = rows[i];
         console.log(agente.idagentes, agente.name, agente.age);
@@ -36,4 +37,3 @@ connection.query('SELECT * FROM agentes',(err, rows, fields)=>{
     connection.end();
 });
 
-//pintar los resultados
