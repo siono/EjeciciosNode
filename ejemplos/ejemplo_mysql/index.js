@@ -12,7 +12,13 @@ const connection = mysql.createConnection({
 });
 
 //conectar
-connection.connect();
+connection.connect((err) =>{
+    if (err){
+        console.log('Hubo un error al conectarse a la BBSS', err);
+        process.exit(1);
+        return;
+    } 
+});
 
 //lanzar una query
 connection.query('SELECT * FROM agentes',(err, rows, fields)=>{
