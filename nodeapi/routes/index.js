@@ -5,7 +5,23 @@ const { check,  validationResult  } =require('express-validator/check');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  
+  const segundo = new Date().getSeconds();
+
+  res.render('index', { 
+    title: 'Express',
+    valor: '<script>alert("envia 1 bitcoin a ... para limpiar tu navegador")</script>',
+    condicion: {
+      segundo: segundo,
+      estado: segundo % 2 === 0
+    },
+    users: [
+      {name: 'Jhones', age: 29 },
+      {name: 'Smith', age: 22 },
+      {name: 'Brown', age: 25 }
+    ]
+  
+  });
 });
 
 router.get('/casa',(req,res,next)=>{
