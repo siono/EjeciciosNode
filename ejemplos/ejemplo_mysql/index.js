@@ -33,7 +33,7 @@ connection.query('SELECT * FROM agentes',(err, rows, fields)=>{
         console.log(agente.idagentes, agente.name, agente.age);
     }
 
-    //cerramos conexión. En un servidor web no se suele cerrar la conexión.
+    //cerramos conexión. En un servidor web no se suele cerrar la conexión ya que recibe peticiones continuamente.
     connection.end();
 });
 
