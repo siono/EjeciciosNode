@@ -24,8 +24,8 @@ router.get('/', function(req, res, next) {
   });
 });
 
-router.get('/casa',(req,res,next)=>{
-  res.send('OK');
+router.get('/hola',(req,res,next)=>{
+  res.render('hola');
 })
 
 router.get('/apiv1/anuncios',(req,res,next)=>{

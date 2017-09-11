@@ -1,12 +1,12 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+<% include header %>
+
+    <header class="masthead">
+      <div class="container h-100">
+        <div class="row h-100">
+          <div class="col-lg-7 my-auto">
+            <div class="header-content mx-auto">
+              <h1><%= title %></h1>
+              <p>Welcome to <%= title %></p>
 
     <p><%= valor %></p>
 
@@ -19,5 +19,14 @@
     <% users.forEach(function(user){ %>
         <p><%= user.name + ' ' + user.age %><p>
     <% }) %>
-  </body>
-</html>
+              <a href="#download" class="btn btn-outline btn-xl js-scroll-trigger">Start Now for Free!</a>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </header>
+    
+    
+  
+<% include footer %>
