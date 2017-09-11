@@ -31,6 +31,9 @@ connection.query('SELECT * FROM agentes',(err, rows, fields)=>{
         const agente = rows[i];
         console.log(agente.idagentes, agente.name, agente.age);
     }
+
+    //cerramos conexión. En un servidor web no se suele cerrar la conexión.
+    connection.end();
 });
 
 //pintar los resultados
